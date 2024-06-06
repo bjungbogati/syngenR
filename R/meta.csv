@@ -1,0 +1,161 @@
+type,name,value,factor
+config,study_id,SYN-01-100
+config,subject_size,20
+config,site_init,1000
+config,subject_init,100
+config,study_start_date,10/11/2019
+config,study_end_date,10/1/2023
+config,protocol_start_date,10/11/2019
+config,protocol_ver,1
+config,no_of_protocols,3
+config,treatment_start_date,1/1/2020
+config,treatment_end_date,1/5/2020
+config,treatment_gap_days,1
+config,treatment_gap_days,1
+crfpage,dm,Demographics,1
+crfpage,ae,Adverse events,2
+crfpage,cm,Concomitant Medications,3
+crfpage,vs,Vital Signs,4
+crfpage,lb,Laboratory,5
+crfpage,mh,Medical History,6
+crfpage,pe,Physical Exams,7
+format,sex,male,0.8
+format,sex,female,0.2
+format,race,AMERICAN INDIAN OR ALASKA NATIVE,0.05
+format,race,ASIAN,0.1
+format,race,BLACK OR AFRICAN AMERICAN,0.05
+format,race,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS,0.05
+format,race,WHITE,0.07
+format,race,NOT REPORTED,0.05
+format,ethnic,NOT REPORTED,Unknown
+format,ethnic,AMERICAN INDIAN OR ALASKA NATIVE,Not Hispanic or Latino
+format,ethnic,ASIAN,Not Hispanic or Latino
+format,ethnic,BLACK OR AFRICAN AMERICAN,Not Hispanic or Latino
+format,ethnic,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS,Not Hispanic or Latino
+format,ethnic,WHITE,Not Hispanic or Latino
+format,record_pos,Supline,
+format,record_pos,Standing,
+format,yes_no,Yes
+format,yes_no,No
+format,yes_no_na,Yes
+format,yes_no_na,No
+format,yes_no_na,NA
+format,site,Clinic
+format,site,Hospital
+format,site,University
+format,incl_excl, Does Not Meet Eligibility Criteria
+format,incl_excl, CRITERIA COULD NOT BE MEET PER PROTOCOL
+format,fun,Not completed
+format,fun,Completed
+format,fun,Death
+format,ae_term,DEHYDRATION
+format,ae_term,DIARRHEA,
+format,ae_term,DIZZINESS,
+format,ae_term,NAUSEA,
+format,ae_term,HYPOTENSION,
+format,ae_term,PAIN (ABDOMEN),
+format,ae_term,CONSTIPATION,
+format,ae_term,FATIGUE,
+format,ae_term,VOMITING,
+format,ae_term,DEATH,
+format,cm_term,PARACETAMOL,NERVOUS SYSTEM
+format,cm_term,NORMAL SALINE,BLOOD AND BLOOD FORMING ORGANS
+format,cm_term,MULTIVITAMIN,ALIMENTARY TRACT AND METABOLISM
+format,cm_term,ASPIRIN,BLOOD AND BLOOD FORMING ORGANS
+format,cm_route,PARACETAMOL,ORAL
+format,cm_route,NORMAL SALINE,INTRAVENOUS
+format,cm_route,MULTIVITAMIN,ORAL
+format,cm_indic,ASPIRIN,INTRAVENOUS
+format,cm_indic,PARACETAMOL,Headache
+format,cm_indic,NORMAL SALINE,Infusion arm pain
+format,cm_indic,MULTIVITAMIN,Digestive disorder
+format,cm_indic,ASPIRIN,Chronic heart failure
+format,cm_dose,PARACETAMOL,Tablet
+format,cm_dose,NORMAL SALINE,mL
+format,cm_dose,MULTIVITAMIN,Tablet
+format,cm_dose,ASPIRIN,mL
+format,cm_freq,PARACETAMOL,QD = 1x per day
+format,cm_freq,NORMAL SALINE,X1 = once
+format,cm_freq,MULTIVITAMIN,QD = 1x per day
+format,cm_freq,ASPIRIN,X1 = once
+format,vs_fmt,Screening,
+format,visit,Screening,SCN
+format,visit,Day 1,D1
+format,visit,Day 2,D2
+format,visit,Day 3,D3
+format,visit,Day 4,D4
+format,visit,Day 5,D5
+format,visit,Week 4,W4
+format,visit,Month 6,W6
+format,visit,Month 8,M8
+format,visit,Month 10,M10
+format,visit,Month 12,M12
+format,dose,Treatment A,TRTA
+format,dose,Placebo,PLAC
+format,eg_timepoint,Pre-infusion,3 Times
+format,eg_timepoint,Post-infusion,3 Times
+format,eg_res,Abnormal,
+format,eg_res,Normal,
+format,eg_minutes,-65,
+format,eg_minutes,-64,
+format,eg_minutes,-63
+format,eg_minutes,-18,
+format,eg_minutes,19,
+format,eg_minutes,20,
+format,eg_visit,Screening,
+format,eg_visit,Week 4,
+format,eg_visit,Month 6,
+format,eg_visit,Month 8,
+format,eg_visit,Month 10,
+format,eg_visit,Month 12,
+format,eg_vol,75,0.7
+format,eg_vol,74,0.2
+format,eg_vol,76,0.1
+format,lb_visit,Screening,
+format,lb_visit,Week 4,
+format,lb_analyte,Chemistry,Urea
+format,lb_analyte,Chemistry,Nitrogen
+format,lb_analyte,Chemistry,Creatinine
+format,lb_analyte,Chemistry,Creatinine
+format,lb_analyte,Chemistry,Clearance
+format,lb_analyte,Chemistry,Glucose
+format,lb_analyte,Chemistry,Potassium
+format,lb_analyte,Chemistry,Sodium
+format,lb_analyte,Chemistry,Calcium
+format,lb_analyte,Chemistry,Chloride
+format,lb_analyte,Chemistry,Carbon
+format,lb_analyte,Chemistry,Dioxide
+format,lb_analyte,Chemistry,Phosphate
+format,lb_analyte,Chemistry,Aspartate
+format,lb_analyte,Chemistry,Aminotransferase
+format,lb_analyte,Chemistry,Alanine
+format,lb_analyte,Chemistry,Aminotransferase
+format,lb_analyte,Chemistry,Gamma
+format,lb_analyte,Chemistry,Glutamyl
+format,lb_analyte,Chemistry,Transferase
+format,lb_analyte,Chemistry,Bilirubin
+format,lb_analyte,Chemistry,Direct
+format,lb_analyte,Chemistry,Bilirubin
+format,lb_analyte,Chemistry,Albumin
+format,lb_analyte,Chemistry,Alkaline
+format,lb_analyte,Chemistry,Phosphatase
+format,lb_analyte,Chemistry,Urate
+format,lb_analyte,Coagulation,Prothrombin Intl. Normalized Ratio
+format,lb_analyte,Coagulation,Prothrombin Time
+format,lb_analyte,Hematology,Hemoglobin
+format,lb_analyte,Hematology,Hematocrit
+format,lb_analyte,Hematology,Erythrocytes
+format,lb_analyte,Hematology,Leukocytes
+format,lb_analyte,Hematology,Platelets
+format,lb_analyte,Hematology,Neutrophils
+format,lb_analyte,Hematology,Lymphocytes
+format,lb_analyte,Hematology,Eosinophils
+format,lb_analyte,Hematology,Monocytes
+format,lb_analyte,Hematology,Basophils
+format,pe_visit,Week 4,W4
+format,pe_visit,Month 6,W6
+format,pe_visit,Month 8,M8
+format,pe_visit,Month 10,M10
+format,pe_visit,Month 12,M12
+format,dd_cause,PANCREATIC CANCER,90
+format,dd_cause,LUNG CANCER,91
