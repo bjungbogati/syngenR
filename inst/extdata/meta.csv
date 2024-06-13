@@ -1,4 +1,4 @@
-type,name,value,factor
+type,name,value,subvalue
 config,study_id,SYN-01-100
 config,subject_size,20
 config,site_init,1000
@@ -33,8 +33,8 @@ format,ethnic,BLACK OR AFRICAN AMERICAN,Not Hispanic or Latino
 format,ethnic,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS,Not Hispanic or Latino
 format,ethnic,WHITE,Not Hispanic or Latino
 format,ethnic,NOT REPORTED,Unknown
-format,record_pos,Supline,
-format,record_pos,Standing,
+format,record_pos,Supline
+format,record_pos,Standing
 format,cbp, Yes, 0.7
 format,cbp, No, 0.3
 format,yes_no,Yes
@@ -51,15 +51,15 @@ format,fun,Not completed
 format,fun,Completed
 format,fun,Death
 format,ae_term,DEHYDRATION
-format,ae_term,DIARRHEA,
-format,ae_term,DIZZINESS,
-format,ae_term,NAUSEA,
-format,ae_term,HYPOTENSION,
-format,ae_term,PAIN (ABDOMEN),
-format,ae_term,CONSTIPATION,
-format,ae_term,FATIGUE,
-format,ae_term,VOMITING,
-format,ae_term,DEATH,
+format,ae_term,DIARRHEA
+format,ae_term,DIZZINESS
+format,ae_term,NAUSEA
+format,ae_term,HYPOTENSION
+format,ae_term,PAIN (ABDOMEN)
+format,ae_term,CONSTIPATION
+format,ae_term,FATIGUE
+format,ae_term,VOMITING
+format,ae_term,DEATH
 format,cm_term,PARACETAMOL,NERVOUS SYSTEM
 format,cm_term,NORMAL SALINE,BLOOD AND BLOOD FORMING ORGANS
 format,cm_term,MULTIVITAMIN,ALIMENTARY TRACT AND METABOLISM
