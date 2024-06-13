@@ -1,5 +1,5 @@
 type,name,value,subvalue
-config,study_id,SYN-01-100
+config,study_id,SYN-01
 config,subject_size,20
 config,site_init,1000
 config,subject_init,100
