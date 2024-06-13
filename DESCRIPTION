@@ -3,8 +3,15 @@ Type: Package
 Title: A Synthetic Dataset Generation for Clinical trial
 Version: 0.1.0
 Author: Binod Jung Bogati
-Maintainer: Binod Jung BOgati <bjungbogati@gmail.com>
-Description:  A Synthetic Dataset Generation for Clinical trial
+Maintainer: Binod Jung Bogati <bjungbogati@gmail.com>
+Description:  syngenR is an R package designed to generate customized synthetic raw datasets for clinical trials. This package addresses the challenges associated with obtaining synthetic data, automating the process of data generation, and ensuring data variability and reliability. 
+        syngenR is ideal for educational purposes, testing various clinical trial scenarios.
+        Features
+        - Generate synthetic datasets that reflect real-world variability.
+        - Tailor datasets to specific clinical trial needs.
+        - Useful for teaching clinical data handling and testing different trial scenarios.
+        - Seamlessly integrates with clinical programming workflows, including SDTM generation.
+        - Reduces the time and effort needed for manual data entry and test data creation.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
