@@ -1,4 +1,4 @@
-### syngenR (Work in Progress)
+## syngenR (Work in Progress)
 
 syngenR is an R package designed to generate customized synthetic raw datasets for clinical trials. 
 This package addresses the challenges associated with obtaining synthetic data, automating the process of data generation, and 
@@ -16,5 +16,5 @@ Disclaimer: This is still under development, so use for testing purpose only.
 ### Installation
 To install the development version of syngenR from GitHub, use the following commands:
 
-# Install syngenR from GitHub
-devtools::install_github("bjungbogati/syngenR")
+##### Install syngenR from GitHub
+`devtools::install_github("bjungbogati/syngenR")`
