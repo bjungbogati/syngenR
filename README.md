@@ -7,7 +7,7 @@ ensuring data variability and reliability. syngenR is ideal for educational purp
 Disclaimer: This is still under development, so use for testing purpose only.
 
 ### Features
-- Automated Data Generation: Generate synthetic datasets that reflect real-world variability.
+- Data Generation: Generate synthetic datasets that reflect real-world variability.
 - Customization: Tailor datasets to specific clinical trial needs.
 - Educational Utility: Useful for teaching clinical data handling and testing different trial scenarios.
 - Integration: Seamlessly integrates with clinical programming workflows, including SDTM generation.
