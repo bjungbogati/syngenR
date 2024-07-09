@@ -1,3 +1,6 @@
+
+# install.packages(c("tidyverse", "janitor", "Tplyr", "r2rtf"))
+
 library(tidyverse)
 library(r2rtf)
 library(janitor)
