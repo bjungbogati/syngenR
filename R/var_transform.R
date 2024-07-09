@@ -10,18 +10,27 @@
 #'
 #' @examples
 #' ymd_gen(Sys.Date())
-ymd_gen <- function(dat) {
+ymd_gen <- function(dat, time_off= "Y") {
   dfname <- deparse(substitute(dat))
   name <- sub("_.*", "", dfname)
+
   year <- yyyy(dat)
   month <- mm(dat)
   day <- dd(dat)
 
-  year_raw <- as.character(year)
-  month_raw <- as.character(month)
-  day_raw <- as.character(day)
+  year_raw <- ifelse(is.na(year), NA_character_, as.character(year))
+  month_raw <- ifelse(is.na(month), NA_character_, as.character(month))
+  day_raw <- ifelse(is.na(day), NA_character_, as.character(day))
 
   df <- data.frame(year, month, day, year_raw, month_raw, day_raw)
+
+  if(time_off == "N") {
+    hour_min <-  hh_mm(dat)
+    hour_min_raw <- ifelse(is.na(hour_min), NA_character_, as.character(hour_min))
+    df <- data.frame(year, month, day, year_raw, month_raw, day_raw, hour_min_raw)
+
+  }
+
   names(df) <- paste(name, names(df), sep = "_")
   return(df)
 }

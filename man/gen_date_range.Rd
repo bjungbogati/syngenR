@@ -4,7 +4,7 @@
 \alias{gen_date_range}
 \title{Generate Random Date-Time Range}
 \usage{
-gen_date_range(start, end, by)
+gen_date_range(start, end, by, size = size)
 }
 \arguments{
 \item{start}{The start date-time as a character string in "YYYY-MM-DD HH:MM:SS" format.}

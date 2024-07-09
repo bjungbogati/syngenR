@@ -93,7 +93,11 @@ birth_date <- function(x, y, size) {
 #' @examples
 #' yyyy(as.Date("2023-01-01"))  # Returns 2023
 yyyy <- function(x) {
-  format(x, "%Y") |> as.numeric()
+  sapply(x, function(d) {
+    if (is.na(d)) return(NA_real_)
+    tryCatch(as.numeric(format(as.Date(d), "%Y")),
+             error = function(e) NA_real_)
+  })
 }
 
 #' Extract Month from Date
@@ -108,8 +112,13 @@ yyyy <- function(x) {
 #' @examples
 #' mm(as.Date("2023-01-01"))  # Returns 1
 mm <- function(x) {
-  format(x, "%m") |> as.numeric()
+  sapply(x, function(d) {
+    if (is.na(d)) return(NA_real_)
+    tryCatch(as.numeric(format(as.Date(d), "%m")),
+             error = function(e) NA_real_)
+  })
 }
+
 
 #' Extract Day from Date
 #'
@@ -123,8 +132,34 @@ mm <- function(x) {
 #' @examples
 #' dd(as.Date("2023-01-01"))  # Returns 1
 dd <- function(x) {
-  format(x, "%d") |> as.numeric()
+  sapply(x, function(d) {
+    if (is.na(d)) return(NA_real_)
+    tryCatch(as.numeric(format(as.Date(d), "%d")),
+             error = function(e) NA_real_)
+  })
 }
+
+#' Extract Time from Date
+#'
+#' Extracts the hour and minute from a Date object.
+#'
+#' @param x A Date object or vector of Date objects.
+#'
+#' @return A character value or vector representing the time(s).
+#' @export
+#'
+#' @examples
+#' hh_mm(as.POSIXct("2023-01-01 14:45:00"))  # Returns 14:45
+
+hh_mm <- function(x) {
+  sapply(x, function(d) {
+    if (is.na(d)) return(NA_real_)
+    tryCatch(as.character(format(as.POSIXct(d), "%H:%M")),
+             error = function(e) NA_real_)
+  })
+}
+
+
 
 #' Generate Random Date-Time Range
 #'
@@ -140,7 +175,7 @@ dd <- function(x) {
 #' @examples
 #' gen_date_range("2023-01-01 00:00:00", "2023-01-02 00:00:00", "1 hour")
 #' # Generates random date-times every hour from Jan 1 to Jan 2, 2023
-gen_date_range <- function(start, end, by) {
+gen_date_range <- function(start, end, by, size=size) {
   sample(seq(as.POSIXct(start), as.POSIXct(end), by = by), size = size, replace = TRUE)
 }
 

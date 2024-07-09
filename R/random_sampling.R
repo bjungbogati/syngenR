@@ -142,11 +142,23 @@ float_bell_gen <- function(start, end, mean = 40, sd = 10, size, unique = TRUE, 
 #'
 #' @examples
 #' std_gen(list(value = c("A", "B", "C"), factor = c(0.3, 0.4, 0.3)))
-std_gen <- function(list){
+std_gen <- function(list, size=size, val="", val2=""){
   dfname <- deparse(substitute(list))
 
-  code <- prob_gen(list = list$value, size = get_size(), prob = list$factor)
-  decode <- factor(code, levels = list$value) |> as.integer()
+  if(dfname == "ethnic_fmt"){
+    code <- factor(val, levels = list$value, labels = list$subvalue)
+    decode <- factor(code, levels = unique(list$subvalue)) |> as.integer()
+  } else if(dfname == "cbp_fmt"){
+    code <- ifelse(
+      val & val2  & prob_gen(list$value, size = size, prob = list$subvalue) == "Yes", "Yes", NA
+    )
+    decode <- factor(code, levels = list$value) |> as.integer()
+  } else{
+    code <- prob_gen(list = list$value, size = size, prob = list$subvalue)
+    decode <- factor(code, levels = list$value) |> as.integer()
+  }
+
+  df <- data.frame(code, decode)
 
   name <- sub("_.*", "", dfname)
   std <- paste(name, "std", sep = "_")

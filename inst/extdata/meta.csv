@@ -11,7 +11,6 @@ config,no_of_protocols,3
 config,treatment_start_date,1/1/2020
 config,treatment_end_date,1/5/2020
 config,treatment_gap_days,1
-config,treatment_gap_days,1
 crfpage,dm,Demographics,1
 crfpage,ae,Adverse events,2
 crfpage,cm,Concomitant Medications,3
@@ -19,14 +18,14 @@ crfpage,vs,Vital Signs,4
 crfpage,lb,Laboratory,5
 crfpage,mh,Medical History,6
 crfpage,pe,Physical Exams,7
-format,sex,male,0.8
-format,sex,female,0.2
-format,race,AMERICAN INDIAN OR ALASKA NATIVE,0.1
-format,race,ASIAN,0.1
-format,race,BLACK OR AFRICAN AMERICAN,0.1
-format,race,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS,0.1
-format,race,WHITE,0.5
-format,race,NOT REPORTED,0.1
+format,sex,male,0.6
+format,sex,female,0.4
+format,race,AMERICAN INDIAN OR ALASKA NATIVE,0.2
+format,race,ASIAN,0.2
+format,race,BLACK OR AFRICAN AMERICAN,0.2
+format,race,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS,0.15
+format,race,WHITE,0.2
+format,race,NOT REPORTED,0.05
 format,ethnic,AMERICAN INDIAN OR ALASKA NATIVE,Not Hispanic or Latino
 format,ethnic,ASIAN,Not Hispanic or Latino
 format,ethnic,BLACK OR AFRICAN AMERICAN,Not Hispanic or Latino
@@ -35,8 +34,8 @@ format,ethnic,WHITE,Not Hispanic or Latino
 format,ethnic,NOT REPORTED,Unknown
 format,record_pos,Supline
 format,record_pos,Standing
-format,cbp, Yes, 0.7
-format,cbp, No, 0.3
+format,cbp,Yes,0.7
+format,cbp,No,0.3
 format,yes_no,Yes
 format,yes_no,No
 format,yes_no_na,Yes
@@ -45,11 +44,11 @@ format,yes_no_na,NA
 format,site,Clinic
 format,site,Hospital
 format,site,University
-format,incl_excl, Does Not Meet Eligibility Criteria
-format,incl_excl, CRITERIA COULD NOT BE MEET PER PROTOCOL
-format,fun,Not completed
-format,fun,Completed
-format,fun,Death
+format,incl_excl,Does Not Meet Eligibility Criteria
+format,incl_excl,CRITERIA COULD NOT BE MEET PER PROTOCOL
+format,ds_status,Not completed
+format,ds_status,Completed
+format,ds_status,Death
 format,ae_term,DEHYDRATION
 format,ae_term,DIARRHEA
 format,ae_term,DIZZINESS
@@ -80,7 +79,7 @@ format,cm_freq,PARACETAMOL,QD = 1x per day
 format,cm_freq,NORMAL SALINE,X1 = once
 format,cm_freq,MULTIVITAMIN,QD = 1x per day
 format,cm_freq,ASPIRIN,X1 = once
-format,dm_visit,SCREENING, SCN
+format,dm_visit,SCREENING,SCN
 format,vs_fmt,Screening,
 format,visit,Screening,SCN
 format,visit,Day 1,D1
@@ -93,6 +92,8 @@ format,visit,Month 6,W6
 format,visit,Month 8,M8
 format,visit,Month 10,M10
 format,visit,Month 12,M12
+format,rndose,Treatment A,0.7
+format,rndose,Placebo,0.3
 format,dose,Treatment A,TRTA
 format,dose,Placebo,PLAC
 format,dm_visit,Screening,SCN
@@ -107,15 +108,22 @@ format,eg_minutes,-18
 format,eg_minutes,19
 format,eg_minutes,20
 format,eg_visit,Screening
-format,eg_visit,Week 4, W4
-format,eg_visit,Month 6, W6
-format,eg_visit,Month 8, M8
-format,eg_visit,Month 10, M10
-format,eg_visit,Month 12, M12
+format,eg_visit,Week 4,W4
+format,eg_visit,Month 6,W6
+format,eg_visit,Month 8,M8
+format,eg_visit,Month 10,M10
+format,eg_visit,Month 12,M12
+format,ex_visit,Day 1,D1
+format,ex_visit,Day 2,D2
+format,ex_visit,Day 3,D3
+format,ex_visit,Day 4,D4
+format,ex_visit,Day 5,D5
 format,eg_vol,75,0.7
 format,eg_vol,74,0.2
 format,eg_vol,76,0.1
-format,lb_visit,Screening,
+format,ietest,Incl,Does Not Meet Eligibility Criteria
+format,ietest,EXcl,Criteria could not as per protocol
+format,lb_visit,Screening
 format,lb_visit,Week 4,W4
 format,lb_analyte,Chemistry,Urea
 format,lb_analyte,Chemistry,Nitrogen
@@ -161,5 +169,4 @@ format,pe_visit,Month 6,W6
 format,pe_visit,Month 8,M8
 format,pe_visit,Month 10,M10
 format,pe_visit,Month 12,M12
-format,dd_cause,PANCREATIC CANCER,90
-format,dd_cause,LUNG CANCER,91
+format,dd_cause,PROGRESSIVE DISEASE,1

@@ -4,7 +4,7 @@
 \alias{std_gen}
 \title{Standardize Data Generation}
 \usage{
-std_gen(list)
+std_gen(list, size = size, val = "", val2 = "")
 }
 \arguments{
 \item{list}{A list containing 'value' and 'factor' elements for generating data.}

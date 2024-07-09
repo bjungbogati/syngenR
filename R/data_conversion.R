@@ -98,6 +98,7 @@ env_to_df <- function(envs) {
   df <- data.frame(envs)
   name <- sub(".*\\.", "", names(df))
   names(df) <- name
+  df$size <- NULL
   return(df)
 }
 

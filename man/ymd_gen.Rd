@@ -4,7 +4,7 @@
 \alias{ymd_gen}
 \title{Generate Year, Month, and Day from Date}
 \usage{
-ymd_gen(dat)
+ymd_gen(dat, time_off = "Y")
 }
 \arguments{
 \item{dat}{A vector of dates.}
