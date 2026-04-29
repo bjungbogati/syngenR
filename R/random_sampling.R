@@ -178,14 +178,27 @@ std_gen <- function(list, size=size, val="", val2=""){
 #'
 #' @examples
 #' gen_site_subj()
-gen_site_subj <- function(width = 4) {
-  project <- project
+gen_site_subj <- function(seed=seed, width = 4) {
+  set.seed(seed)
+  project   <- project
   projectid <- projectid
-  site_list <- list_gen(site_fmt, size) |> sort()
-  site_group <- siteinit + factor(site_list, levels = site_fmt) |> as.integer() |> sort()
-  group_seq <- stats::ave(site_group, site_list, FUN = seq_along)
 
-  subject <- paste(site_group, formatC(group_seq, width = width, flag = "0"), sep = "-") |> sort()
+  site_list  <- list_gen(site_fmt, size) |> sort()
+  site_group <- siteinit + factor(site_list, levels = site_fmt) |> as.integer()
+
+  # Sort both together so site_group and site_list stay aligned
+  ord        <- order(site_group)
+  site_list  <- site_list[ord]
+  site_group <- site_group[ord]
+
+  # Sequence within each numeric site_group (not site_list label)
+  group_seq  <- stats::ave(site_group, site_group, FUN = seq_along)
+
+  subject <- paste(
+    site_group,
+    formatC(group_seq, width = width, flag = "0"),
+    sep = "-"
+  )
 
   df <- data.frame(projectid, project, site_list, site_group, subject)
   return(df)

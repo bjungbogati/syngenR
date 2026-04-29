@@ -4,7 +4,7 @@
 \alias{gen_site_subj}
 \title{Generate Site Subject Identifiers}
 \usage{
-gen_site_subj(width = 4)
+gen_site_subj(seed = seed, width = 4)
 }
 \arguments{
 \item{width}{The width of the numerical part of the identifier (default is 4).}
