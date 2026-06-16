@@ -5,3 +5,5 @@
 .Rproj
 redundant/
 docs
+CLAUDE.md
+.claude/
